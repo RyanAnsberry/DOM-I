@@ -64,13 +64,36 @@ btn.textContent = siteContent["cta"]["button"];
   // top content
 let topContent = document.querySelector('.top-content');
 
-let features = topContent.firstElementChild;
-features.firstChild.textContent = siteContent["main-content"]["features-h4"];
-features.lastChild.textContent = siteContent["main-content"]["features-content"];
+let features = topContent.children[0];
+features.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["features-h4"];
+features.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["features-content"];
 
-let about = topContent.lastElementChild;
-about.firstChild.textContent = siteContent["main-content"]["about-h4"];
-about.lastChild.textContent = siteContent["main-content"]["about-content"];
+let about = topContent.children[1];
+about.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["about-h4"];
+about.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["about-content"];
 
   // bottom content
+let botContent = document.querySelector('.bottom-content');
 
+let services = botContent.children[0];
+services.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["services-h4"];
+services.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["services-content"];
+
+let product = botContent.children[1];
+product.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["product-h4"];
+product.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["product-content"];
+
+let vision = botContent.children[2];
+vision.getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
+vision.getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
+
+// contact
+let contact = document.querySelector(".contact");
+contact.getElementsByTagName("h4")[0].innerHTML = siteContent["contact"]["contact-h4"];
+contact.getElementsByTagName("p")[0].innerHTML = siteContent["contact"]["address"];
+contact.getElementsByTagName("p")[1].innerHTML = siteContent["contact"]["phone"];
+contact.getElementsByTagName("p")[2].innerHTML = siteContent["contact"]["email"];
+
+// footer
+let footer = document.querySelector("footer");
+footer.getElementsByTagName("p")[0].innerHTML = siteContent["footer"]["copyright"];
