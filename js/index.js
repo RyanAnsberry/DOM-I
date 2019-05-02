@@ -57,5 +57,20 @@ navAnchors.forEach(function(anchor, i) {
 let mainH1 = document.querySelector('.cta-text h1');
 mainH1.textContent = siteContent["cta"]["h1"];
 
-let btn = document.querySelector('button');
+let btn = document.querySelector('.cta-text button');
 btn.textContent = siteContent["cta"]["button"];
+
+// main-content 
+  // top content
+let topContent = document.querySelector('.top-content');
+
+let features = topContent.firstElementChild;
+features.firstChild.textContent = siteContent["main-content"]["features-h4"];
+features.lastChild.textContent = siteContent["main-content"]["features-content"];
+
+let about = topContent.lastElementChild;
+about.firstChild.textContent = siteContent["main-content"]["about-h4"];
+about.lastChild.textContent = siteContent["main-content"]["about-content"];
+
+  // bottom content
+
