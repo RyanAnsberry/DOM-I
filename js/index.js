@@ -48,10 +48,25 @@ let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // Nav anchor tags
-let navAnchors = document.querySelectorAll('a');
+let navAnchors = document.querySelectorAll('nav a');
 navAnchors.forEach(function(anchor, i) {
   return anchor.textContent = siteContent["nav"][`nav-item-${i}`];
 });
+
+  // green nav text
+navAnchors.forEach((anchor,i) => {
+  anchor.style.color = "green";
+});
+
+  // new nodes
+navAnchors = document.getElementsByTagName("nav")[0];
+let newNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+navAnchors.prepend(newNode("Reviews"));
+navAnchors.append(newNode("Menu"));
 
 // cta elements
 let mainH1 = document.querySelector('.cta-text h1');
